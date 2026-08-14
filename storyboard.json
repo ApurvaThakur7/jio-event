@@ -1,0 +1,148 @@
+{
+  "project": "Jio World Convention Centre — BKC, Mumbai",
+  "format": { "width": 1920, "height": 1080, "fps": 30, "aspect": "16:9" },
+  "crossfadeSeconds": 0.7,
+  "introFadeSeconds": 1.6,
+  "outroFadeSeconds": 2.2,
+  "model": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+  "audio": {
+    "source": "C:/Users/apurv_5ntmg0j/Downloads/leberch-real-estate-262604.mp3",
+    "fadeInSeconds": 1.6,
+    "fadeOutSeconds": 2.5
+  },
+  "promptNotes": [
+    "Camera motion verb sits in the first 8-10 words — models weight early tokens most heavily.",
+    "Exactly ONE camera move per shot, with one direction and one speed. Stacking moves produces mush.",
+    "Every prompt names what must stay STABLE. Architecture i2v fails by warping straight lines and melting ceilings.",
+    "Avoid cinematography jargon that doubles as a noun ('truck', 'crane', 'dolly zoom') — video models have shown a tendency to render the literal object instead of the camera move. Use unambiguous phrasing ('slide sideways', 'lift upward') instead.",
+    "No text/letters requested in-frame — all typography is added in Remotion where it stays sharp and editable."
+  ],
+  "shots": [
+    {
+      "id": "01-signage",
+      "image": "e01-signage-dusk.jpg",
+      "beat": "Opening — slow, title holds",
+      "duration": 6.5,
+      "prompt": "Slow gentle push in toward the illuminated building signage at dusk, the long-exposure light trails from traffic continuing to streak steadily below, building windows glowing warm and constant, sky holding its dusk gradient. Photorealistic architectural exterior at blue hour, the building facade and signage do not warp or change, no morphing.",
+      "camera": "push in, very slow",
+      "text": { "kicker": "BANDRA KURLA COMPLEX, MUMBAI", "line": "Jio World Convention Centre", "style": "center" }
+    },
+    {
+      "id": "02-bkc",
+      "image": "a02-bkc-garden.webp",
+      "beat": "Establish the precinct",
+      "duration": 4.8,
+      "prompt": "Slow aerial drift forward over the business district, high-rise towers holding rigid perfectly straight vertical lines, gentle parallax between the glass towers and the green open ground below, hazy Mumbai afternoon light, a few distant figures crossing the lawn. Photorealistic architectural drone footage, buildings do not morph or bend, no warping.",
+      "camera": "aerial push forward, slow",
+      "text": { "kicker": "MUMBAI'S FINANCIAL DISTRICT", "line": "", "style": "lower" }
+    },
+    {
+      "id": "03-butterfly",
+      "image": "e02-butterfly-stars.jpg",
+      "beat": "Signature exterior, night",
+      "duration": 4.8,
+      "prompt": "Slow dolly in toward the illuminated fountain beneath the golden canopy structure, water jets rising and falling in continuous motion, stars holding steady in the night sky, warm light reflecting on the wet plaza. Cinematic photoreal night architecture, the canopy structure does not deform or melt, no morphing.",
+      "camera": "dolly in, slow",
+      "text": { "kicker": "JIO WORLD CENTRE", "line": "Dhirubhai Ambani Square", "style": "lower" }
+    },
+    {
+      "id": "04-arrival",
+      "image": "b03-tvs-N275.jpg",
+      "beat": "Arrival / scale reveal",
+      "duration": 4.8,
+      "prompt": "Slow steadicam glide forward down the marble concourse, business guests walking naturally away from camera, the ornate gold lotus ceiling panel holding rigid and perfectly straight, polished marble floor reflections shifting smoothly. Photorealistic architectural walkthrough, ceiling pattern does not warp or ripple, floor inlay geometry stays exact.",
+      "camera": "steadicam forward, slow",
+      "text": { "kicker": "INDIA'S LARGEST", "line": "convention centre", "style": "center" }
+    },
+    {
+      "id": "05-concourse",
+      "image": "c01-concourse.webp",
+      "beat": "Architecture beauty beat",
+      "duration": 4.8,
+      "prompt": "Slow tilt up across the multi-storey concourse, the suspended teal glass sculpture catching light and turning very slightly, curved balcony edges and white columns holding rigid straight geometry, daylight streaming through the glass facade. Photoreal interior architecture, curves stay smooth and exact, no melting.",
+      "camera": "tilt up, slow",
+      "text": { "kicker": "MULTI-STOREY CONCOURSES", "line": "", "style": "lower" }
+    },
+    {
+      "id": "06-reception",
+      "image": "b01-tvs-N221.jpg",
+      "beat": "Scale statistic",
+      "duration": 4.8,
+      "prompt": "Slow dolly forward down the centre aisle toward the marble column, guests crossing the floor in soft natural motion past the twin reception desks, the dark swirl floor inlay and golden herringbone accent walls holding perfectly rigid and symmetrical, warm wood ceiling glowing steady. Photorealistic five-star lobby interior, desks and column do not warp or lean, floor inlay stays exact.",
+      "camera": "dolly forward, slow",
+      "text": { "kicker": "32,163 SQ. M.", "line": "under one roof", "style": "center" }
+    },
+    {
+      "id": "07-jasmine",
+      "image": "b02-tvs-N279.jpg",
+      "beat": "Hero: the pillarless hall",
+      "duration": 5.2,
+      "prompt": "Slow dolly forward into the vast empty hall, the honeycomb coffered ceiling holding perfectly rigid straight rows, warm downlights steady, patterned carpet stretching away with smooth perspective. Photorealistic empty convention hall, ceiling cells do not ripple or morph, walls stay perfectly straight, no people appear.",
+      "camera": "dolly forward, slow",
+      "text": { "kicker": "JASMINE HALLS", "line": "10,000 sq. m. pillarless", "sub": "the largest of their kind in India", "style": "center" }
+    },
+    {
+      "id": "08-fintech",
+      "image": "e03-fintech-fest.webp",
+      "beat": "Proof: major summits",
+      "duration": 4.8,
+      "prompt": "Slow push in over the seated audience toward the illuminated stage, delegates shifting and turning subtly in their seats, the large LED stage screens glowing steadily, honeycomb ceiling holding rigid, pink and blue stage lighting constant. Photorealistic corporate summit footage, audience moves naturally, screens do not flicker or change content, architecture does not warp.",
+      "camera": "push in, slow",
+      "text": { "kicker": "HOME TO GLOBAL FINTECH FEST", "line": "and India's biggest summits", "style": "lower" }
+    },
+    {
+      "id": "09-summit",
+      "image": "d02-jd-convhall.webp",
+      "beat": "Business capability",
+      "duration": 4.8,
+      "prompt": "Slow lateral glide sideways to the right along the curved delegate desks, country flags standing still on the tables, the perforated ceiling holding rigid straight geometry, warm lighting steady across the empty summit floor. Photorealistic convention hall interior, an empty room with no vehicles or machinery of any kind, desks and flags do not deform, ceiling pattern stays exact, no people appear.",
+      "camera": "lateral glide right, slow",
+      "text": { "kicker": "BUILT FOR", "line": "global summits", "style": "center" }
+    },
+    {
+      "id": "10-healthsummit",
+      "image": "d03-jd-jasmin.webp",
+      "beat": "Proof: tech summits",
+      "duration": 4.8,
+      "prompt": "Slow push in toward the main stage, stage wash lights shifting gently in colour, the speaker on screen holding steady, banquet tables and guests still in the foreground, ceiling structure rigid. Photorealistic live summit footage, low-light cinematic, no warping of the stage screens, architecture stays exact.",
+      "camera": "push in, slow",
+      "text": { "kicker": "4 MILLION GUESTS", "line": "through the doors since 2022", "style": "lower" }
+    },
+    {
+      "id": "11-pavilion",
+      "image": "c08-exhibition.webp",
+      "beat": "Exhibition capability",
+      "duration": 4.8,
+      "prompt": "Slow dolly forward down the centre of the vast exhibition hall, the tree-form structural columns holding perfectly rigid and straight, a few business visitors walking naturally for scale, cool ceiling lighting steady, polished concrete floor reflecting evenly. Photorealistic empty exhibition pavilion, columns do not bend or multiply, ceiling grid stays exact.",
+      "camera": "dolly forward, slow",
+      "text": { "kicker": "3 PAVILIONS", "line": "1,61,400 sq. ft. of exhibition space", "style": "center" }
+    },
+    {
+      "id": "12-lotus",
+      "image": "b04-tvs-N282.jpg",
+      "beat": "The signature room",
+      "duration": 5.2,
+      "prompt": "Slow orbit left around the ballroom, the three lotus chandeliers holding rigid with crystals catching light, gold scrollwork ceiling staying perfectly exact, patterned carpet sweeping smoothly through frame. Photorealistic luxury ballroom interior, chandeliers do not deform or swing, ceiling pattern does not ripple, no people appear.",
+      "camera": "orbit left, slow",
+      "text": { "kicker": "THE LOTUS BALLROOM", "line": "3,200 guests", "style": "center" }
+    },
+    {
+      "id": "13-welcome",
+      "image": "e04-staff-namaste.png",
+      "beat": "Human warmth beat before the close",
+      "duration": 4.8,
+      "prompt": "Very slow gentle push in toward the group, fabric and hair moving with the faintest natural stillness, the gold mesh wall catching light steadily, marble stairs holding rigid straight lines. Photorealistic hospitality portrait, people hold their pose naturally without distortion, architecture does not warp.",
+      "camera": "push in, very slow",
+      "text": { "kicker": "3,000+ EVENTS HOSTED", "line": "welcomed with warmth, every time", "style": "lower" }
+    },
+    {
+      "id": "14-endcard",
+      "image": "b06-tvs-N280-vert.jpg",
+      "beat": "End card — slow, fades to black",
+      "duration": 7.5,
+      "prompt": "Very slow dolly forward down the chandelier corridor, crystal chandeliers holding rigid and still, onyx wall panels glowing steadily, marble floor inlay reflecting smoothly, warm even light. Photorealistic architectural interior, chandeliers do not swing or morph, floor geometry stays perfectly exact, no people appear.",
+      "camera": "dolly forward, very slow",
+      "text": { "kicker": "JIO WORLD CONVENTION CENTRE", "line": "BKC · Mumbai", "style": "endcard" }
+    }
+  ]
+}
