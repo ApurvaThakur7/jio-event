@@ -19,7 +19,7 @@ import ffmpegPath from "ffmpeg-static";
 
 const run = promisify(execFile);
 const CHUNKS_DIR = "out/chunks";
-const OUT = "out/jwcc-reel.mp4";
+const OUT = "out/reel.mp4";
 const RETRIES = 3;
 
 const sb = JSON.parse(await readFile("storyboard.json", "utf8"));
@@ -59,7 +59,7 @@ for (const shot of shotsToRender) {
     try {
       process.stdout.write(`  [${i + 1}/${sb.shots.length}] ${shot.id} frames ${start}-${end}` + (attempt > 1 ? ` (retry ${attempt - 1})` : "") + " ... ");
       await run("npx", [
-        "remotion", "render", "remotion/index.ts", "JWCCReel", out,
+        "remotion", "render", "remotion/index.ts", "Reel", out,
         `--frames=${start}-${end}`,
         "--concurrency=1",
       ], { shell: true, maxBuffer: 1024 * 1024 * 64 });

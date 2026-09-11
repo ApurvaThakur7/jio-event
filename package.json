@@ -1,16 +1,16 @@
 {
-  "name": "jwcc-video-gen",
+  "name": "jewelry-shop-kanpur-reel",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Jio World Convention Centre - AI reel pipeline (stills -> fal image-to-video -> Remotion assembly)",
+  "description": "Jewelry Shop, Kanpur -- AI hero video pipeline (stills -> fal image-to-video -> Remotion assembly)",
   "scripts": {
     "prep": "node scripts/prep-frames.mjs",
     "prep-audio": "node scripts/prep-audio.mjs",
     "generate": "node scripts/generate.mjs",
     "fix-fps": "node scripts/fix-framerate.mjs",
     "studio": "remotion studio remotion/index.ts",
-    "render": "remotion render remotion/index.ts JWCCReel out/jwcc-reel.mp4 --concurrency=2",
+    "render": "remotion render remotion/index.ts Reel out/reel.mp4 --concurrency=2",
     "render:chunks": "node scripts/render-chunks.mjs"
   },
   "dependencies": {

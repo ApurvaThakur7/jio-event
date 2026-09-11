@@ -1,0 +1,61 @@
+name: Generate hero video
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Crop stills to target format (free, local)
+        run: npm run prep
+
+      - name: Generate AI video clips (paid — uses FAL_KEY secret)
+        run: npm run generate
+        env:
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+
+      - name: Prep audio bed
+        run: npm run prep-audio
+
+      - name: Fix output framerate
+        run: npm run fix-fps
+
+      - name: Render final video (chunked, memory-safe)
+        run: npm run render:chunks
+
+      - name: Commit rendered video back to the branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f out/reel.mp4
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "Render hero video via GitHub Actions"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+      - name: Upload video as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jewelry-shop-kanpur-hero-video
+          path: out/reel.mp4
+          retention-days: 30

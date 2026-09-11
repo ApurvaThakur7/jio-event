@@ -10,7 +10,7 @@ const durationInFrames = Math.round(totalSeconds * fps);
 
 export const RemotionRoot: React.FC = () => (
   <Composition
-    id="JWCCReel"
+    id="Reel"
     component={Reel}
     durationInFrames={durationInFrames}
     fps={fps}
