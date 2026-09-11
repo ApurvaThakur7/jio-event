@@ -32,6 +32,16 @@ jobs:
       - name: Crop stills to target format (free, local)
         run: npm run prep
 
+      - name: Cache generated clips (only regenerate changed shots)
+        uses: actions/cache@v4
+        with:
+          path: |
+            remotion/public/clips
+            out/.clip-cache.json
+          key: clips-${{ hashFiles('storyboard.json') }}
+          restore-keys: |
+            clips-
+
       - name: Generate AI video clips (paid — uses FAL_KEY secret)
         run: npm run generate
         env:

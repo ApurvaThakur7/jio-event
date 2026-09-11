@@ -59,8 +59,8 @@
       "image": "05-bridal.jpg",
       "cropGravity": "north",
       "beat": "Human / emotional beat before the close",
-      "duration": 5.2,
-      "prompt": "Very slow gentle push in toward the bride, fabric and jewelry catching light with the faintest natural stillness, incense smoke drifting naturally upward, she holds her pose naturally without distortion. Cinematic photoreal portrait, ornate archways in the background stay exact.",
+      "duration": 4.8,
+      "prompt": "Very slow gentle push in toward the bride, her gold headpiece and hair holding their exact shape and color throughout, fabric catching soft warm light, thin wisps of incense smoke drifting naturally to the side, she holds her pose naturally without distortion. Cinematic photoreal portrait, warm steady archway lighting in the background, ornate architecture stays exact.",
       "camera": "push in, very slow",
       "text": { "kicker": "FOR YOUR MOST PRECIOUS MOMENTS", "line": "Where Every Sparkle Tells Your Story", "style": "center" }
     },
