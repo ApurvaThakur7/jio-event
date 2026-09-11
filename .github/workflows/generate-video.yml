@@ -2,6 +2,11 @@ name: Generate hero video
 
 on:
   workflow_dispatch: {}
+  push:
+    branches:
+      - claude/amazing-einstein-48bb0n
+    paths:
+      - .github/workflows/generate-video.yml
 
 permissions:
   contents: write
